@@ -2,6 +2,9 @@
   --fg-color: #adb2cf;
   --bg-color: #1e202c;
 
+  --input-border-color: #adb2cf5d;
+  --table-border: #4f55725d;
+
   --default-font: "Inter Variable", sans-serif;
 }
 
@@ -12,8 +15,31 @@
   box-sizing: border-box;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   background: var(--bg-color);
   color: var(--fg-color);
   font-family: var(--default-font);
+}
+
+input {
+  padding: 15px 20px;
+  outline: none;
+  border: solid 1px var(--input-border-color);
+  background: #191a27;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 5px;
+}
+
+input:focus {
+  border: solid 1px rgb(255, 255, 255);
+  filter: drop-shadow(0 0 10px #18191f);
+}
+
+input::placeholder {
+  color: rgb(133, 145, 155);
 }
