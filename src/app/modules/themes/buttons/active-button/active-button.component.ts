@@ -4,7 +4,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   selector: 'app-active-button',
   imports: [],
   templateUrl: './active-button.component.html',
-  styleUrl: './active-button.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ActiveButtonComponent {
