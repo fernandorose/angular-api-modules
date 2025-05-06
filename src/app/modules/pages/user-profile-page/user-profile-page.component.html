@@ -1,0 +1,101 @@
+<main>
+  <div>
+    <h1>My profile</h1>
+  </div>
+  <div>
+    <img src="{{ user?.image }}" alt="" />
+    <table class="name-table">
+      <tr>
+        <td>Name</td>
+        <td>
+          <h2>{{ user?.firstName }} {{ user?.lastName }}</h2>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Contact info</h3>
+    <div class="contact">
+      <table class="contact-info-table">
+        <tr>
+          <td>Email</td>
+          <td>{{ user?.email }}</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>{{ user?.phone }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div>
+    <h3>Personal Stats</h3>
+    <table class="personal-stats-table">
+      <tr>
+        <td>Eye color</td>
+        <td>{{ user?.eyeColor }}</td>
+      </tr>
+      <tr>
+        <td>Height</td>
+        <td>{{ user?.height }}</td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>{{ user?.weight }}</td>
+      </tr>
+      <tr>
+        <td>Blood group</td>
+        <td>{{ user?.bloodGroup }}</td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Personal data</h3>
+    <table class="personal-data-table">
+      <tr>
+        <td>IP</td>
+        <td>{{ user?.ip }}</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          {{ user?.address?.address }}, {{ user?.address?.postalCode }},
+          {{ user?.address?.city }}, {{ user?.address?.state }},
+          {{ user?.address?.country }},
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div>
+    <h3>Company info</h3>
+    <table class="company-data-table">
+      <tr>
+        <td>Company name</td>
+        <td>{{ user?.company?.name }}</td>
+      </tr>
+      <tr>
+        <td>Title</td>
+        <td>
+          {{ user?.company?.title }}
+        </td>
+      </tr>
+      <tr>
+        <td>Department</td>
+        <td>
+          {{ user?.company?.department }}
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>
+          {{ user?.company?.address?.address }},
+          {{ user?.company?.address?.postalCode }},
+          {{ user?.company?.address?.city }},
+          {{ user?.company?.address?.state }},
+          {{ user?.company?.address?.country }},
+        </td>
+      </tr>
+    </table>
+  </div>
+  <app-active-button [button]="logoutButton" (click)="logout()" />
+</main>

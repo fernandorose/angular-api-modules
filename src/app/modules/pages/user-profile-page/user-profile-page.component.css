@@ -1,0 +1,39 @@
+table {
+  /* border: solid 1px var(--input-border-color); */
+  border-collapse: collapse;
+  /* border: solid 1px var(--table-border); */
+}
+
+/* .contact {
+  border: solid 1px var(--table-border);
+  width: fit-content;
+  border-radius: 10px;
+} */
+
+.name-table {
+  width: 300px;
+}
+
+.personal-stats-table {
+  width: 300px;
+}
+
+.contact-info-table {
+  width: 400px;
+}
+
+.personal-data-table,
+.company-data-table {
+  width: 100%;
+}
+
+td {
+  /* border-bottom: solid 1px var(--table-border); */
+  padding: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
