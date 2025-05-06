@@ -1,0 +1,21 @@
+.user-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 10px;
+}
+
+section {
+  width: fit-content;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.user-info span {
+  text-decoration: underline;
+}
