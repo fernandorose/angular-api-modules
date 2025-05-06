@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { User, UserData } from '../../interfaces/user.interface';
+import { User } from '../../interfaces/user.interface';
 import { UserProviderService } from '../../services/providers/user-provider';
 import { ActiveButtonComponent } from '../../themes/buttons/active-button/active-button.component';
 import { Router } from '@angular/router';
