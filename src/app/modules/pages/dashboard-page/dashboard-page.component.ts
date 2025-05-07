@@ -1,7 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { User } from '../../interfaces/user.interface';
 import { UserProviderService } from '../../services/providers/user-provider';
-import { ActiveButtonComponent } from '../../themes/buttons/active-button/active-button.component';
 import { Router } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 import { CookieService } from 'ngx-cookie-service';
@@ -10,7 +9,7 @@ import generateId from '../../utils/id-gen';
 
 @Component({
   selector: 'app-dashboard-page',
-  imports: [ActiveButtonComponent, ModuleCardComponent],
+  imports: [ModuleCardComponent],
   templateUrl: './dashboard-page.component.html',
   styleUrl: './dashboard-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -40,7 +39,6 @@ export class DashboardPageComponent {
   user: User | null = null;
 
   private userProvider = inject(UserProviderService);
-  private userService = inject(UsersService);
   private router = inject(Router);
   private cookiesService = inject(CookieService);
 
