@@ -56,7 +56,7 @@
         @if (loginForm.get('username')?.invalid &&
         loginForm.get('username')?.touched) {
         <div>
-          <span>Username is required</span>
+          <span class="error">* Username is required</span>
         </div>
         }
       </div>
@@ -89,7 +89,7 @@
         @if (loginForm.get('password')?.invalid &&
         loginForm.get('password')?.touched) {
         <div>
-          <span>Password is required</span>
+          <span class="error">* Password is required</span>
         </div>
         }
       </div>
@@ -97,7 +97,7 @@
       <app-active-button [button]="loginButton" (click)="login()" />
       @if (loginError) {
       <div>
-        <span>Invalid credentials</span>
+        <span class="error">* Invalid credentials</span>
       </div>
       }
       <a href="https://dummyjson.com/users" target="_blank">User list</a>
