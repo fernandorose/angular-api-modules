@@ -7,11 +7,11 @@ import {
 import { Subject, takeUntil } from 'rxjs';
 import { Recipe } from '../../interfaces/recipe.interface';
 import { RecipeProviderService } from '../../services/providers/recipe-provider';
-import { NgClass, NgStyle } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-recipes-page',
-  imports: [NgClass, NgStyle],
+  imports: [NgClass],
   templateUrl: './recipes-page.component.html',
   styleUrl: './recipes-page.component.css',
 })
