@@ -44,3 +44,8 @@ input:focus {
 input::placeholder {
   color: rgb(133, 145, 155);
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
