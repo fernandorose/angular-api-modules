@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Router, type CanActivate, type CanActivateFn } from '@angular/router';
+import { Router, type CanActivate } from '@angular/router';
 import { UsersService } from '../services/users.service';
 
 @Injectable({
