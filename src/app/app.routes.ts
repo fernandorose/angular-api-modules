@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginPageComponent } from './modules/pages/login-page/login-page.component';
 import { TokenGuard } from './modules/guards/token-guard.guard';
 import { NavbarLayoutComponent } from './modules/layouts/navbar-layout/navbar-layout.component';
+import { NotFoundPageComponent } from './modules/pages/not-found-page/not-found-page.component';
 
 export const routes: Routes = [
   {
@@ -27,6 +28,16 @@ export const routes: Routes = [
             './modules/pages/user-profile-page/user-profile-page.component'
           ),
       },
+      {
+        path: 'recipes',
+        title: 'Recipes',
+        loadComponent: () =>
+          import('./modules/pages/recipes-page/recipes-page.component'),
+      },
     ],
+  },
+  {
+    path: '**',
+    component: NotFoundPageComponent,
   },
 ];
