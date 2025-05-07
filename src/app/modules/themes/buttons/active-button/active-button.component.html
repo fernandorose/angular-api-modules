@@ -4,8 +4,8 @@
   button {
     width: 100%;
     padding: 10px;
-    background: #ec4116;
-    color: #691d0a;
+    background: #e63d0a;
+    color: oklch(20% 0.3 30);
     outline: transparent;
     border: solid 1px transparent;
     font-size: 1.2rem;
@@ -13,5 +13,12 @@
     font-family: inherit;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(1 * 20%)) inset;
+    border: solid 1px #0000009a;
+    text-shadow: 0 1px 0 oklch(100% 0 0 / calc(1 * 0.15));
+  }
+
+  button:hover {
+    filter: drop-shadow(0 5px 10px oklch(10% 0 0 / calc(1 * 20%)));
   }
 </style>
