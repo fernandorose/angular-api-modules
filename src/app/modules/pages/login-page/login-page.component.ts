@@ -55,7 +55,7 @@ export class LoginPageComponent {
 
   login() {
     if (this.loginForm.invalid) {
-      this.loginForm.markAllAsTouched(); // Muestra errores
+      this.loginForm.markAllAsTouched();
       return;
     }
 
@@ -66,19 +66,18 @@ export class LoginPageComponent {
       .pipe(
         switchMap((data) => {
           const token = data.accessToken;
-          this.cookiesService.set('authToken', token, 1); // guarda el token en cookies
-          return this.usersService.getAuthUser(token); // obtiene datos completos del usuario
+          this.cookiesService.set('authToken', token, 1);
+          return this.usersService.getAuthUser(token);
         })
       )
       .subscribe({
         next: (userData) => {
-          localStorage.setItem('user', JSON.stringify(userData)); // guarda en localStorage
+          localStorage.setItem('user', JSON.stringify(userData));
           this.router.navigate(['/dashboard']);
           this.loginForm.reset();
         },
         error: (err) => {
           console.error('Error al iniciar sesión:', err);
-          // Aquí puedes mostrar un mensaje de error al usuario si lo necesitas
         },
       });
   }
