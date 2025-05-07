@@ -1,0 +1,40 @@
+<main>
+  @for (recipe of recipes; track recipe.id) {
+  <div class="card">
+    <div class="image-container">
+      <img src="{{ recipe.image }}" alt="" />
+    </div>
+    <div class="title">
+      <h1 class="name">{{ recipe.name }}</h1>
+      <span
+        class="difficulty"
+        [ngClass]="getDifficultyClass(recipe.difficulty)"
+        >{{ recipe.difficulty }}</span
+      >
+    </div>
+    <table>
+      <tr>
+        <td>Preparing time (minutes)</td>
+        <td>{{ recipe.prepTimeMinutes }}</td>
+      </tr>
+      <tr>
+        <td>Cooking time (minutes)</td>
+        <td>{{ recipe.cookTimeMinutes }}</td>
+      </tr>
+      <tr>
+        <td>Calories per serving</td>
+        <td>{{ recipe.caloriesPerServing }}</td>
+      </tr>
+      <tr>
+        <td>Cuisine</td>
+        <td>{{ recipe.cuisine }}</td>
+      </tr>
+    </table>
+    <div class="tags">
+      @for (tag of recipe.tags; track tag) {
+      <span>{{ tag }}</span>
+      }
+    </div>
+  </div>
+  }
+</main>

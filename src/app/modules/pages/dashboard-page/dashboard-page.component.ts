@@ -5,10 +5,12 @@ import { ActiveButtonComponent } from '../../themes/buttons/active-button/active
 import { Router } from '@angular/router';
 import { UsersService } from '../../services/users.service';
 import { CookieService } from 'ngx-cookie-service';
+import { ModuleCardComponent } from '../../components/module-card/module-card.component';
+import generateId from '../../utils/id-gen';
 
 @Component({
   selector: 'app-dashboard-page',
-  imports: [ActiveButtonComponent],
+  imports: [ActiveButtonComponent, ModuleCardComponent],
   templateUrl: './dashboard-page.component.html',
   styleUrl: './dashboard-page.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -17,6 +19,22 @@ export class DashboardPageComponent {
   logoutButton = {
     buttonName: 'Logout',
     event: '',
+  };
+
+  postsModule = {
+    id: `${generateId()}`,
+    title: 'Posts',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    event: '',
+    route: '',
+  };
+
+  recipesModule = {
+    id: `${generateId()}`,
+    title: 'Recipes',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+    event: '',
+    route: '/recipes',
   };
 
   user: User | null = null;
@@ -32,16 +50,6 @@ export class DashboardPageComponent {
     this.userProvider.user$.subscribe((data) => {
       this.user = data;
     });
-    // this.userService.getAuthUser(token).subscribe((data) => {
-    //   console.log(data);
-    //   const user = {
-    //     firstName: data.firstName,
-    //     lastName: data.lastName,
-    //     email: data.email,
-    //     bank: data.bank,
-    //   };
-    //   localStorage.setItem('user', JSON.stringify(user));
-    // });
   }
 
   logout() {

@@ -7,6 +7,7 @@ section {
   position: fixed;
   background: #1e202cb6;
   backdrop-filter: blur(30px);
+  z-index: 1;
 }
 
 nav {
@@ -17,9 +18,29 @@ nav {
   justify-content: space-between;
 }
 
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
 .user-info {
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.home svg {
+  transition: 300ms;
+}
+
+.home:hover svg {
+  transform: translateX(-5px);
 }

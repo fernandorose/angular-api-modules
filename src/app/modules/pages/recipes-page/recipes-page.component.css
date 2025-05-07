@@ -1,0 +1,96 @@
+.easy {
+  color: rgb(24, 211, 133); /* color para dificultad fácil */
+}
+
+.medium {
+  color: rgb(255, 153, 0); /* color para dificultad media */
+}
+
+.hard {
+  color: red; /* color para dificultad difícil */
+}
+
+.image-container {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex; /* Permite centrar la imagen */
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center; /* Centra la imagen verticalmente */
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  border-bottom: solid 1px var(--table-border);
+  padding-block: 5px;
+}
+
+.difficulty {
+  font-size: 0.85rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.tags {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card {
+  background: #1b1d29;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(1 * 6%)) inset;
+  border: solid 1px oklch(10% 0 0 / calc(1 * 50%));
+  padding: 10px;
+  overflow: hidden;
+  height: auto;
+  cursor: pointer;
+}
+
+.card:hover .image-container img {
+  transform: scale(1.1);
+}
+
+.name {
+  font-size: 1.5rem;
+  text-shadow: 0 2px 0 oklch(100% 0 0 / calc(1 * 0.15));
+}
+
+.tags span {
+  font-size: 0.9rem;
+  background: #422e07;
+  padding: 5px;
+  text-shadow: 0 1px 0 oklch(100% 0 0 / calc(1 * 0.15));
+  box-shadow: 0 0.5px 0 0.5px oklch(100% 0 0 / calc(1 * 6%)) inset;
+  border-radius: 5px;
+  border: solid 1px oklch(10% 0 0 / calc(1 * 6%));
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: oklch(100% 0.2 50);
+  max-width: 100%;
+}
