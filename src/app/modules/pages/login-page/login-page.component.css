@@ -40,3 +40,10 @@ main {
   justify-content: center;
   align-items: center;
 }
+
+.username,
+.password {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
