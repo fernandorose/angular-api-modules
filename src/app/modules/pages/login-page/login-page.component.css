@@ -30,6 +30,7 @@ form {
 
 .title h1 {
   font-size: 3rem;
+  text-shadow: 0 1px 0 oklch(100% 0 0 / calc(1 * 0.15));
 }
 
 main {
