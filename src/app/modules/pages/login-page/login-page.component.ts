@@ -42,6 +42,8 @@ export class LoginPageComponent {
   private cookiesService = inject(CookieService);
   private router = inject(Router);
 
+  loginError: boolean = false;
+
   loginForm = this._fb.group({
     username: ['', [Validators.required]],
     password: ['', [Validators.required]],
@@ -56,6 +58,7 @@ export class LoginPageComponent {
   login() {
     if (this.loginForm.invalid) {
       this.loginForm.markAllAsTouched();
+      this.loginError = true;
       return;
     }
 
