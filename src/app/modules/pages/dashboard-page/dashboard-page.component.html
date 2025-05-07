@@ -1,4 +1,9 @@
 <main>
-  <app-module-card [apiModule]="postsModule"></app-module-card>
-  <app-module-card [apiModule]="recipesModule"></app-module-card>
+  <div class="title">
+    <h1>Module list</h1>
+  </div>
+  <section>
+    <app-module-card [apiModule]="postsModule"></app-module-card>
+    <app-module-card [apiModule]="recipesModule"></app-module-card>
+  </section>
 </main>
