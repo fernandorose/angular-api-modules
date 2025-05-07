@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-active-button',
@@ -9,6 +10,5 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 export class ActiveButtonComponent {
   @Input() button!: {
     buttonName: string;
-    event: string;
   };
 }
