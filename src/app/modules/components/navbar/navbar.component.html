@@ -2,7 +2,7 @@
   <nav>
     <ul class="user-info" [routerLink]="['/my-profile']">
       <img src="{{ user?.image }}" alt="" width="50" />
-      <div>
+      <div class="user-name">
         <h1>{{ user?.firstName }} {{ user?.lastName }}</h1>
         <span>{{ user?.username }}</span>
       </div>

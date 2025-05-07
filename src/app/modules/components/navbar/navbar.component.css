@@ -30,6 +30,14 @@ nav ul {
   cursor: pointer;
 }
 
+.user-info:hover .user-name {
+  transform: translateX(10px);
+}
+
+.user-name {
+  transition: 300ms;
+}
+
 .home {
   display: flex;
   align-items: center;
