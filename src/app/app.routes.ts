@@ -16,6 +16,7 @@ export const routes: Routes = [
     children: [
       {
         path: 'dashboard',
+        title: 'Dashboard',
         loadComponent: () =>
           import('./modules/pages/dashboard-page/dashboard-page.component'),
         canActivate: [TokenGuard],
