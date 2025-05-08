@@ -35,6 +35,12 @@ export const routes: Routes = [
         loadComponent: () =>
           import('./modules/pages/recipes-page/recipes-page.component'),
       },
+      {
+        path: 'posts',
+        title: 'Posts',
+        loadComponent: () =>
+          import('./modules/pages/posts-page/posts-page.component'),
+      },
     ],
   },
   {
