@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { API_GET_USER, API_USER_LOGIN } from '../../environment';
-import { User, UserData } from '../interfaces/user.interface';
+import { User } from '../interfaces/user.interface';
 import { CookieService } from 'ngx-cookie-service';
 import { tap } from 'rxjs';
 
@@ -33,7 +33,6 @@ export class UsersService {
         })
       );
   }
-
   isAuthenticated(): boolean {
     return this.cookiesService.check('authToken');
   }
