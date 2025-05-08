@@ -33,6 +33,7 @@ export class UsersService {
         })
       );
   }
+
   isAuthenticated(): boolean {
     return this.cookiesService.check('authToken');
   }

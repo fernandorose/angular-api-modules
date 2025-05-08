@@ -5,7 +5,7 @@ section {
   display: flex;
   align-items: center;
   position: fixed;
-  background: #1e202cb6;
+  background: #171922c5;
   backdrop-filter: blur(30px);
   z-index: 1;
 }
