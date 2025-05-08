@@ -1,3 +1,28 @@
-:host {
-  display: block;
+main {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--monospace-font);
+}
+
+span {
+  font-size: 2rem;
+}
+
+a {
+  padding-top: 20px;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 10rem;
+  text-shadow: 0 5px 0 oklch(100% 0 0 / calc(1 * 0.15));
 }
