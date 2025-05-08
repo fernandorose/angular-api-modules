@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { UserProviderService } from '../../services/providers/user-provider';
 import { User } from '../../interfaces/user.interface';
 
@@ -14,7 +14,6 @@ export class NavbarComponent {
   user: User | null = null;
 
   private userProvider = inject(UserProviderService);
-  private router = inject(Router);
 
   ngOnInit(): void {
     this.userProvider.initFromStorage();
