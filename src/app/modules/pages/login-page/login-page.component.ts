@@ -76,6 +76,11 @@ export class LoginPageComponent {
       .subscribe({
         next: (userData) => {
           localStorage.setItem('user', JSON.stringify(userData));
+          setInterval(() => {
+            this.cookiesService.delete('authToken');
+            localStorage.removeItem('user');
+            this.router.navigate(['/']);
+          }, 3600000); // 1 hour
           this.router.navigate(['/dashboard']);
           this.loginForm.reset();
         },
