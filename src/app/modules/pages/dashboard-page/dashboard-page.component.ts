@@ -25,7 +25,7 @@ export class DashboardPageComponent {
     title: 'Posts',
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
     event: '',
-    route: '',
+    route: '/posts',
   };
 
   recipesModule = {
